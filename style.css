@@ -1,0 +1,96 @@
+:root {
+    --clr-primary-400: hsl(158, 36%, 37%);
+    --clr-primary-500: hsl(158, 36%, 20%);
+    --clr-secondary-200: hsl(30, 38%, 92%);
+  
+    --clr-neutral-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(228, 12%, 48%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+  
+    --ff-accent: "Fraunces", serif;
+    --ff-base: "Montserrat", sans-serif;
+    --fw-regular: 500;
+    --fw-bold: 700;
+  }
+ 
+  body{
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-400);
+    font-size: 0.875rem;
+    background-color: var(--clr-secondary-200);
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    margin: 1rem;
+  }
+  .prices{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+
+  } 
+  .button{
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-bold);
+    font-size: 0.925rem;
+  
+  }
+  .button[data-icon="shopping-cart"]::before{
+content: "";
+background-image:url("./images/icon-cart.svg") ;
+width: 15px;
+height: 16px;
+  }
+.button:where(:hover,:focus){
+    background-color: var(--clr-primary-500);
+
+}
+  .product{
+    --content-padding: 1.5rem;
+    --content-spacing: 1rem;
+background-color: var(--clr-neutral-100);
+border-radius: 0.5rem;
+overflow: hidden;
+display: grid;
+
+  }
+  @media (min-width:600px) {
+    .product{
+        grid-template-columns:1fr 1fr ;
+    }
+    
+  }
+  .product__content{
+    padding: var(--content-padding);
+  color: var(--clr-neutral-400);
+    display: grid;
+    gap: var(--content-spacing);
+  }
+  .product__category{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.8125rem;
+  }
+  .product__title{
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color: var(--clr-neutral-900);
+  }
+  .product__price{
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color: var(--clr-primary-400);
+  }
