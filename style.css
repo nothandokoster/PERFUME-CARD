@@ -27,6 +27,7 @@
   padding: 0;
   text-align: center; 
   }
+  
   .prices{
     display: flex;
     gap: 1rem;
@@ -106,11 +107,6 @@ margin: 3rem;
   }
   p{
     margin-bottom: 0.825rem;
-    line-height: 2.5rem;}
-    #main_container {
-      margin: 0 auto; /* Center the main container horizontally */
-      text-align: left; /* Align text within the container to the left */
-      /* Additional styling for your main container */
-      width: 400px;
-      background-color: #66ffff;
-    }
+    line-height: 2.5rem;
+  }
+    
