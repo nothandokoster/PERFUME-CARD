@@ -13,7 +13,19 @@
     --fw-bold: 700;
   }
 
-
+  body {
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the entire page horizontally */
+  }
+  
+  main {
+    max-width: 960px; /* Set a specific max-width for your content */
+    margin: auto; /* Center the container horizontally */
+    /* Additional styling for your container */
+    background-color: #f9f9f9;
+    /* ... */
+  }
   body{
     font-family: var(--ff-base);
     font-weight: var(--fw-regular);
@@ -105,8 +117,5 @@ margin: 3rem;
     color: var(--clr-primary-400);
     margin-top: 0.25rem;
   }
-  p{
-    margin-bottom: 0.825rem;
-    line-height: 2.5rem;
-  }
+  
     
