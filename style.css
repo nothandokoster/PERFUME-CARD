@@ -19,13 +19,13 @@ body {
 }
 
 .parent-container {
-  width: 600px; /*change this to a spefic size , not 100% . I will tell u when to use 100%, but we use 100% in images most of the time , to avoid cutting the image when screen is small*/
-  /*max-width: 600px;  - I removed this line of code */
+  width: 600px;
   border-radius: 10px;
-  /*padding: 200px;*/
+
   margin: auto;
   display: flex;
   flex-direction: row;
+
   background-color: #f9f9f9;
   /* ... */
 }
@@ -89,9 +89,12 @@ img {
   background-color: var(--clr-primary-500);
 }
 
-@media (min-width: 600px) {
-  .product {
-    grid-template-columns: 1fr 1fr;
+@media (max-width: 768px) {
+  .parent-container {
+    flex-direction: column;
+  }
+  .childbox-image {
+    order: -1;
   }
 }
 .product__content {
