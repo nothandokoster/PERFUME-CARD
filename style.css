@@ -15,15 +15,13 @@
 
 body {
   margin: 0;
-  padding: 0;
-  text-align: center; /* Center the entire page horizontally */
+  padding: 100px;
 }
 
 .parent-container {
-  width: 800px; /*change this to a spefic size , not 100% . I will tell u when to use 100%, but we use 100% in images most of the time , to avoid cutting the image when screen is small*/
+  width: 600px; /*change this to a spefic size , not 100% . I will tell u when to use 100%, but we use 100% in images most of the time , to avoid cutting the image when screen is small*/
   /*max-width: 600px;  - I removed this line of code */
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 20px;
+  border-radius: 10px;
   /*padding: 200px;*/
   margin: auto;
   display: flex;
@@ -31,6 +29,7 @@ body {
   background-color: #f9f9f9;
   /* ... */
 }
+
 .product {
   margin: 10px;
 }
@@ -44,16 +43,24 @@ body {
   margin: 0;
   padding: 0;
 }
-.image picture {
-  display: block;
+main {
+  padding: 100px;
+}
+.childbox-image {
+  flex: 1;
+}
+img {
+  background-size: cover;
   width: 100%;
-  height: auto;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .prices {
   display: flex;
   gap: 1rem;
-  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 .button {
@@ -81,24 +88,17 @@ body {
 .button:where(:hover, :focus) {
   background-color: var(--clr-primary-500);
 }
-.product {
-  --content-padding: 0.7rem;
-  --content-spacing: 1rem;
-  background-color: var(--clr-neutral-100);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  display: grid;
-  margin: 3rem;
-}
+
 @media (min-width: 600px) {
   .product {
     grid-template-columns: 1fr 1fr;
   }
 }
 .product__content {
-  padding: var(--content-padding);
+  padding: 30px;
   color: var(--clr-neutral-400);
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 .product__category {
